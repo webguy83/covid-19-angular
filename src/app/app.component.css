@@ -1,0 +1,45 @@
+mat-toolbar {
+  height: auto;
+}
+
+h1 {
+  font-size: 6rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 100;
+  line-height: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+mat-form-field {
+  margin: 0.5rem 0px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 0 7rem;
+}
+
+mat-card {
+  background-color: #fafdff;
+}
+
+mat-card > img {
+  margin: auto;
+  display: block;
+}
+
+mat-list .mat-list-icon {
+  background-color: #bdbdbd;
+  color: white;
+  padding: 7px;
+}
