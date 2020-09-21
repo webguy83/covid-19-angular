@@ -1,5 +1,6 @@
 mat-toolbar {
   height: auto;
+  white-space: normal;
 }
 
 h1 {
@@ -16,6 +17,8 @@ main {
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 mat-form-field {
@@ -24,22 +27,11 @@ mat-form-field {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
-  padding: 0 7rem;
+  width: 80%;
 }
 
-mat-card {
-  background-color: #fafdff;
-}
-
-mat-card > img {
-  margin: auto;
-  display: block;
-}
-
-mat-list .mat-list-icon {
-  background-color: #bdbdbd;
-  color: white;
-  padding: 7px;
+mat-spinner {
+  margin-top: 5rem;
 }

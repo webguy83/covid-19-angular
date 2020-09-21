@@ -1,0 +1,38 @@
+<mat-card>
+  <img
+    src="https://www.countryflags.io/{{ code }}/flat/64.png"
+    alt="Country Flag"
+    title="Country Flag"
+    width="64"
+    height="64"
+  />
+  <mat-card-content>
+    <h2 class="mat-headline">{{ name }}</h2>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>account_box</mat-icon>
+        <p class="mat-body" mat-line>Total Cases</p>
+        <p class="mat-body-strong" mat-line>{{ totalConfirmed | addcomma }}</p>
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>airline_seat_individual_suite</mat-icon>
+        <p class="mat-body" mat-line>Deaths</p>
+        <p class="mat-body-strong" mat-line>{{ totalDeaths | addcomma }}</p>
+      </mat-list-item>
+    </mat-list>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>accessibility_new</mat-icon>
+        <p class="mat-body" mat-line>Recovered</p>
+        <p class="mat-body-strong" mat-line>{{ totalRecovered | addcomma }}</p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>stars</mat-icon>
+        <p class="mat-body" mat-line>Percentage of deaths per cases</p>
+        <p class="mat-body-strong" mat-line>{{ deathPercent }}%</p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

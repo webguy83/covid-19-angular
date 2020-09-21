@@ -1,0 +1,22 @@
+mat-card {
+  background-color: #fafdff;
+}
+
+mat-card > img {
+  margin: auto;
+  display: block;
+}
+
+mat-list .mat-list-icon {
+  background-color: #bdbdbd;
+  color: white;
+  padding: 7px;
+}
+
+.mat-list-base .mat-list-item .mat-line {
+  white-space: normal;
+}
+
+.mat-body {
+  font-weight: 600;
+}

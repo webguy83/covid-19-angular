@@ -1,164 +1,20 @@
 <main>
   <mat-toolbar color="primary">
-    <h1>COVID-19</h1>
+    <h1>{{ title }}</h1>
   </mat-toolbar>
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline" *ngIf="countries.length > 0">
     <mat-label>Search for country</mat-label>
-    <input matInput />
+    <input matInput (keyup)="onCountryChange($event)" />
   </mat-form-field>
-  <div class="cards">
-    <mat-card>
-      <img
-        src="https://www.countryflags.io/US/flat/64.png"
-        alt="Country Flag"
-        title="Country Flag"
-        width="64"
-        height="64"
-      />
-      <mat-card-content>
-        <h2 class="mat-headline">United States of America</h2>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>account_box</mat-icon>
-            <p class="mat-body" mat-line>Total Cases</p>
-            <p class="mat-body-strong" mat-line>67567555</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>airline_seat_individual_suite</mat-icon>
-            <p class="mat-body" mat-line>Deaths</p>
-            <p class="mat-body-strong" mat-line>345435</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>accessibility_new</mat-icon>
-            <p class="mat-body" mat-line>Recovered</p>
-            <p class="mat-body-strong" mat-line>345345</p>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon mat-list-icon>stars</mat-icon>
-            <p class="mat-body" mat-line>Percentage of deaths per cases</p>
-            <p class="mat-body-strong" mat-line>2%</p>
-          </mat-list-item>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-    <mat-card>
-      <img
-        src="https://www.countryflags.io/US/flat/64.png"
-        alt="Country Flag"
-        title="Country Flag"
-        width="64"
-        height="64"
-      />
-      <mat-card-content>
-        <h2 class="mat-headline">United States of America</h2>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>account_box</mat-icon>
-            <p class="mat-body" mat-line>Total Cases</p>
-            <p class="mat-body-strong" mat-line>67567555</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>airline_seat_individual_suite</mat-icon>
-            <p class="mat-body" mat-line>Deaths</p>
-            <p class="mat-body-strong" mat-line>345435</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>accessibility_new</mat-icon>
-            <p class="mat-body" mat-line>Recovered</p>
-            <p class="mat-body-strong" mat-line>345345</p>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon mat-list-icon>stars</mat-icon>
-            <p class="mat-body" mat-line>Percentage of deaths per cases</p>
-            <p class="mat-body-strong" mat-line>2%</p>
-          </mat-list-item>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-    <mat-card>
-      <img
-        src="https://www.countryflags.io/US/flat/64.png"
-        alt="Country Flag"
-        title="Country Flag"
-        width="64"
-        height="64"
-      />
-      <mat-card-content>
-        <h2 class="mat-headline">United States of America</h2>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>account_box</mat-icon>
-            <p class="mat-body" mat-line>Total Cases</p>
-            <p class="mat-body-strong" mat-line>67567555</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>airline_seat_individual_suite</mat-icon>
-            <p class="mat-body" mat-line>Deaths</p>
-            <p class="mat-body-strong" mat-line>345435</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>accessibility_new</mat-icon>
-            <p class="mat-body" mat-line>Recovered</p>
-            <p class="mat-body-strong" mat-line>345345</p>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon mat-list-icon>stars</mat-icon>
-            <p class="mat-body" mat-line>Percentage of deaths per cases</p>
-            <p class="mat-body-strong" mat-line>2%</p>
-          </mat-list-item>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card>
-      <img
-        src="https://www.countryflags.io/US/flat/64.png"
-        alt="Country Flag"
-        title="Country Flag"
-        width="64"
-        height="64"
-      />
-      <mat-card-content>
-        <h2 class="mat-headline">United States of America</h2>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>account_box</mat-icon>
-            <p class="mat-body" mat-line>Total Cases</p>
-            <p class="mat-body-strong" mat-line>67567555</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>airline_seat_individual_suite</mat-icon>
-            <p class="mat-body" mat-line>Deaths</p>
-            <p class="mat-body-strong" mat-line>345435</p>
-          </mat-list-item>
-        </mat-list>
-        <mat-list>
-          <mat-list-item>
-            <mat-icon mat-list-icon>accessibility_new</mat-icon>
-            <p class="mat-body" mat-line>Recovered</p>
-            <p class="mat-body-strong" mat-line>345345</p>
-          </mat-list-item>
-          <mat-list-item>
-            <mat-icon mat-list-icon>stars</mat-icon>
-            <p class="mat-body" mat-line>Percentage of deaths per cases</p>
-            <p class="mat-body-strong" mat-line>2%</p>
-          </mat-list-item>
-        </mat-list>
-      </mat-card-content>
-    </mat-card>
+  <div class="cards" *ngIf="countries.length > 0">
+    <app-card
+      *ngFor="let country of modifiedCountries"
+      name="{{ country.Country }}"
+      code="{{ country.CountryCode }}"
+      totalConfirmed="{{ country.TotalConfirmed }}"
+      totalDeaths="{{ country.TotalDeaths }}"
+      totalRecovered="{{ country.TotalRecovered }}"
+    ></app-card>
   </div>
+  <mat-spinner *ngIf="countries.length <= 0"></mat-spinner>
 </main>
